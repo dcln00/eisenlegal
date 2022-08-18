@@ -1,0 +1,29 @@
+#client-section {
+    margin-bottom:100px;
+
+    .section-title {
+        text-align:center;
+    }
+
+    .clientele {
+        aspect-ratio: 1;
+        border: 1px solid getColor(light-color);
+        overflow: hidden;
+        padding:30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        filter: grayscale(1);
+        transition:all .5s;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+
+        img {
+            width:200px;
+            height:auto;
+
+        }
+    }
+}

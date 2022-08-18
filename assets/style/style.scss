@@ -1,0 +1,25 @@
+@import 'abstracts/typography';
+@import 'abstracts/colors';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/transitions';
+@import 'components/to-top-button';
+@import 'components/consultation-box';
+@import 'components/mobile-navigation';
+@import 'components/bgwrap';
+//layout
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/about-section';
+@import 'layout/practice-areas-section';
+@import 'layout/team-section';
+@import 'layout/client-section';
+@import 'layout/footer';
+//
+@import 'pages/slug';
+@import 'pages/about';
+@import 'pages/practiceareas';
+@import 'pages/publications';
+@import 'pages/posts';
+@import 'pages/contact';
+@import 'base/mq';

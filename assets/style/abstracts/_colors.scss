@@ -1,0 +1,22 @@
+$colors: (
+    theme: (
+        'main-color': #a37a2d,
+		'main-hover': #8c6721,
+        'sec-color': #1d2436,
+        'dark-color': #0f0f0f,
+        'light-color': #ededed,
+        'text-color': #828282,
+        'footer-color':#222222,
+        'white': white,
+    )
+);
+
+:root {
+    @each $theme, $color in map-get($colors, theme){
+        --#{$theme} : #{$color};
+    }
+};
+
+@function getColor($color){
+    @return var(--#{$color});
+};

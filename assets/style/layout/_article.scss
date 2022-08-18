@@ -1,0 +1,45 @@
+#article {
+	margin-bottom: 150px;
+	article {
+		margin-bottom:50px;
+		.nuxt-content h2 {
+			font-size: 18px;
+			font-family: $body-heading;
+			color: getColor(text-color);
+			margin-top: 40px;
+			margin-bottom: 20px;
+		  }
+
+		.nuxt-content p {
+			font-size: 16px;
+			color: getColor(text-color);
+		}
+
+		.nuxt-content ul {
+			color: getColor(text-color);
+
+			.nuxt-content li {
+				padding: {
+					top: 10px;
+					bottom:10px;
+				}
+			}
+		}
+	}
+
+	.tag-box {
+		column-gap: 20px;
+
+		.tags {
+			background-color: getColor(light-color);
+			padding: {
+				top: 10px;
+				bottom:10px;
+				left:20px;
+				right:20px;
+			}
+			text-transform: uppercase;
+			font-size: 10px;
+		}
+	}
+}

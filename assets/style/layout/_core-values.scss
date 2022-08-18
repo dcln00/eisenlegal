@@ -1,0 +1,92 @@
+#values {
+    margin-bottom:100px;
+
+    .col-sm-6 {
+        aspect-ratio: 1;
+
+        img {
+            width: 100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .values-content {
+
+            .section-title {
+                text-align: center;
+            }
+
+            h1 {
+                color: getColor(text-color);
+                text-align: center;
+                letter-spacing: -0.06em;
+            }
+
+            #accordionBasic {
+
+                width: 570px;
+                margin-top: 60px;
+
+                .accordion-item {
+                    border: 1px solid getColor(text-color);
+                    border-radius: 0;
+                    width:100%;
+        
+                    .accordion-collapse.collapsing {
+                        border-radius: 0;
+                    }
+                }
+
+                button {
+                    background-color: transparent;
+                    border-bottom: none;
+                    border-radius: 0;
+                    color: getColor(text-color);
+                    box-shadow:none;
+                    padding:30px;
+
+                    .section-title {
+                        margin-bottom:0;
+                        color: getColor(text-color);
+                    }
+                }
+
+                .accordion-body {
+                    
+                    p {
+                        color: getColor(text-color);
+                        text-transform: uppercase;
+                        font-family: $body-font;
+                        line-height: 24px;
+                    }
+
+                    .core-values {
+                        column-gap:30px;
+                        padding-left:20px;
+
+                        .cvalue {
+                            position:relative;
+                        }
+
+                        .cvalue:before {
+                            content: ' ';
+                            background-image: url(~/assets/icons/accordioncheck.svg);
+                            width: 20px;
+                            height:20px;
+                            position:absolute;
+                            left:-20px;
+                        }
+                    }
+                }
+                
+                .accordion-button::after {
+                    background-image: url(~/assets/icons/accordionminus.svg);
+                  }
+
+                .accordion-button.collapsed::after {
+                    background-image: url(~/assets/icons/accordionplus.svg);
+                  }
+            }
+        }
+    }
+}
