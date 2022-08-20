@@ -13,7 +13,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Best &seasoned lawyers with over 25 years experience. Our work spans across key practice areas such as litigation, arbitration, corporate, commercial law, real estate, property and conveyance, family law practice, debt recovery, banking and insurance.  LEARN MORE Follow Us Follow Us ABOUT US passion for excellence We are driven by a deep passion for excellence',
+          'Best & seasoned lawyers with over 15 years experience.',
       },
       {
         hid: 'keywords',
@@ -31,13 +31,13 @@ export default {
         hid: 'og:description',
         property: 'og:locale',
         content:
-          'Best &seasoned lawyers with over 25 years experience. Our work spans across key practice areas such as litigation, arbitration, corporate, commercial law, real estate, property and conveyance, family law practice, debt recovery, banking and insurance.  LEARN MORE Follow Us Follow Us ABOUT US passion for excellence We are driven by a deep passion for excellence',
+          'Best & seasoned lawyers with over 15 years experience.',
       },
       { hid: 'og:site_name', property: 'og:site_name', content: 'Eisen & Co' },
       { hid: 'og:image:alt', property: 'og:image:alt', content: '' },
       //tc
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary' },
-      { hid: 'twitter:site', property: 'twitter:site', content: '' },
+      { hid: 'twitter:site', property: 'twitter:site', content: main_base_URL },
       {
         hid: 'twitter:title',
         property: 'twitter:title',
@@ -47,7 +47,7 @@ export default {
         hid: 'twitter:description',
         property: 'twitter:description',
         content:
-          'Best &seasoned lawyers with over 25 years experience. Our work spans across key practice areas such as litigation, arbitration, corporate, commercial law, real estate, property and conveyance, family law practice, debt recovery, banking and insurance.  LEARN MORE Follow Us Follow Us ABOUT US passion for excellence We are driven by a deep passion for excellence',
+          'Best & seasoned lawyers with over 15 years experience.',
       },
       { hid: 'twitter:image', property: 'twitter:image', content: '' },
       { hid: 'twitter:image:alt', property: 'twitter:image', content: '' },
@@ -77,7 +77,17 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+	  name: 'Eisenlegal',
     },
+	meta: {
+		name: 'Eisenlegal',
+		description: 'Best & seasoned lawyers with over 15 years experience.',
+		'og:site_name' : 'Eisenlegal',
+		'og:title' : 'Eisenlegal',
+		'og:description' : 'Eisenelgal',
+		'twitter:card' : 'summary',
+		'twitter:site' : main_base_URL,
+	  }
   },
 
   content: {
