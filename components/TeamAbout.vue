@@ -17,55 +17,75 @@ import img01 from '~/assets/images/attorneys/geraldasante.jpg'
 import img02 from '~/assets/images/attorneys/abena.jpg'
 import img03 from '~/assets/images/attorneys/denzel.jpg'
 import img04 from '~/assets/images/attorneys/ian.jpg'
-import  { Swiper, Autoplay } from 'swiper';
+import { Swiper, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 export default {
-	data() {
-		return {
-			title: 'Our',
-			heading: 'Attorneys',
-			active: false,
-			attourneys: [
-				{img: img01, id:0, attourneyTitle:'Position', attourneyName: 'Lorem Ipsum Delor'},
-				{img: img02, id:1, attourneyTitle:'Position', attourneyName: 'Lorem Ipsum Delor'},
-				{img: img03, id:2, attourneyTitle:'Position', attourneyName: 'Lorem Ipsum Delor'},
-				{img: img04, id:3, attourneyTitle:'Position', attourneyName: 'Lorem Ipsum Delor'},
-			],
-			hover: -1,
-		}
-	},
-	methods: {
-		hoverEnter(index) {
-			this.hover = index
-			this.active = !this.active
-			console.log('hovering on ' + index)
-		},
+  data() {
+    return {
+      title: 'Our',
+      heading: 'Attorneys',
+      active: false,
+      attourneys: [
+        {
+          img: img01,
+          id: 0,
+          attourneyTitle: 'Position',
+          attourneyName: 'Lorem Ipsum Delor',
+        },
+        {
+          img: img02,
+          id: 1,
+          attourneyTitle: 'Position',
+          attourneyName: 'Lorem Ipsum Delor',
+        },
+        {
+          img: img03,
+          id: 2,
+          attourneyTitle: 'Position',
+          attourneyName: 'Lorem Ipsum Delor',
+        },
+        {
+          img: img04,
+          id: 3,
+          attourneyTitle: 'Position',
+          attourneyName: 'Lorem Ipsum Delor',
+        },
+      ],
+      hover: -1,
+    }
+  },
+  methods: {
+    hoverEnter(index) {
+      this.hover = index
+      this.active = !this.active
+      console.log('hovering on ' + index)
+    },
 
-		hoverLeave() {
-			this.active = !this.active
-			console.log('stopped on ' + this.hover)
-		}
-	},
-	mounted() {
-		const swiperatt = new Swiper('.swiperatt', {
-			modules: [Autoplay],
-			loop: false,
-			allowTouchMove: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			grabCursor: false,
-			freeMode: true,
-			centeredSlides: false,
-			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false,
-			},
-			breakpoints: {
-				992: {
-					slidesPerView: 3,
-					},
-			}
+    hoverLeave() {
+      this.active = !this.active
+      console.log('stopped on ' + this.hover)
+    },
+  },
+  mounted() {
+    const swiperatt = new Swiper('.swiperatt', {
+      modules: [Autoplay],
+      loop: false,
+      allowTouchMove: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      grabCursor: false,
+      freeMode: true,
+      centeredSlides: false,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+        },
+      },
     })
-	}
+  },
 }
 </script>

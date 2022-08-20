@@ -16,19 +16,19 @@ div
 </template>
 
 <script>
-import jumboPhoto from '~/assets/images/court.jpg';
+import jumboPhoto from '~/assets/images/court.jpg'
 
 export default {
-    name: "AboutPage",
-	head: {
-		titleTemplate: 'About - %s',
-	},
-    data() {
-        return {
-            title: "Who we are",
-			heading: 'Eisen & Co., is one of <br>the leading law firms in Ghana.',
-            jumboPhoto,
-        }
+  name: 'AboutPage',
+  head: {
+    titleTemplate: 'About - %s',
+  },
+  data() {
+    return {
+      title: 'Who we are',
+      heading: 'Eisen & Co., is one of <br>the leading law firms in Ghana.',
+      jumboPhoto,
     }
+  },
 }
 </script>

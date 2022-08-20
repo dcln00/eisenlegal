@@ -10,6 +10,6 @@ section#herojumbo.container-fluid
 
 <script>
 export default {
-    name:'JumbotronSection',
+  name: 'JumbotronSection',
 }
 </script>

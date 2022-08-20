@@ -37,81 +37,84 @@ import img01 from '~/assets/images/attorneys/geraldasante.jpg'
 import img02 from '~/assets/images/attorneys/abena.jpg'
 import img03 from '~/assets/images/attorneys/denzel.jpg'
 import img04 from '~/assets/images/attorneys/ian.jpg'
-import  { Swiper, Navigation, Autoplay, EffectFade, Controller } from 'swiper';
+import { Swiper, Navigation, Autoplay, EffectFade, Controller } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 export default {
-	data() {
-		return {
-			title: 'Meet our Attorneys',
-			heading: 'Team Performance is a Priority',
-			team: [
-				{name:'Hon. Gerald Asante', position:'ceo', image: img01},
-				{name:'Ms. Abena Sefah', position:'snr. associate partner', image: img02},
-				{name:'Denzel Aarons', position:'attorney', image: img03},
-				{name:'Ian J. Asante', position:'intern', image: img04},
-			]
-		}
-	},
-   mounted() {
+  data() {
+    return {
+      title: 'Meet our Attorneys',
+      heading: 'Team Performance is a Priority',
+      team: [
+        { name: 'Hon. Gerald Asante', position: 'ceo', image: img01 },
+        {
+          name: 'Ms. Abena Sefah',
+          position: 'snr. associate partner',
+          image: img02,
+        },
+        { name: 'Denzel Aarons', position: 'attorney', image: img03 },
+        { name: 'Ian J. Asante', position: 'intern', image: img04 },
+      ],
+    }
+  },
+  mounted() {
     const swiperimg = new Swiper('.swiperimg', {
       loop: true,
-	  allowTouchMove: false,
+      allowTouchMove: false,
       modules: [Navigation, Autoplay, Controller],
-	  //grabCursor: false,
-	  //centeredSlides: true,
+      //grabCursor: false,
+      //centeredSlides: true,
       autoplay: {
         delay: 2500,
-		disableOnInteraction: false,
+        disableOnInteraction: false,
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-	   controller: {
-		control: swiperinfo,
-		by: 'slide',
-	  }
+      controller: {
+        control: swiperinfo,
+        by: 'slide',
+      },
     })
 
-	const swiperinfo = new Swiper('.swiperinfo', {
+    const swiperinfo = new Swiper('.swiperinfo', {
       loop: true,
       modules: [Navigation, Autoplay, EffectFade, Controller],
-	  effect: 'fade',
-	  fadeEffect: {
-		crossFade: true,
-	  },
-	  allowTouchMove: false,  
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      allowTouchMove: false,
       autoplay: {
         delay: 2500,
-		disableOnInteraction: false,
+        disableOnInteraction: false,
       },
-	   navigation: {
+      navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
     })
 
-	swiperimg.params.control = swiperinfo
-	swiperinfo.params.control = swiperimg
+    swiperimg.params.control = swiperinfo
+    swiperinfo.params.control = swiperimg
   },
 }
 </script>
 
 <style lang="scss">
-
 .swiperimg.mySwiper .swiper-wrapper {
-	aspect-ratio: 1;
-	position:relative;
+  aspect-ratio: 1;
+  position: relative;
 }
 
 .swiperinfo > .swiper-wrapper:nth-child(1) {
-	aspect-ratio:inherit;
-	max-width:600px;
-	height: auto;
+  aspect-ratio: inherit;
+  max-width: 600px;
+  height: auto;
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
-	font-size: 15px;
-	
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px;
 }
 </style>

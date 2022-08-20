@@ -32,7 +32,5 @@ section.container#contact-form
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>

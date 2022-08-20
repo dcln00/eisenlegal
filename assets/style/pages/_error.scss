@@ -1,0 +1,56 @@
+#error {
+	height: 100vh;
+	background-color: getColor(dark-color);
+	background-image: url(/src/assets/images/bg-texture.png);
+	position:relative;
+
+	.box {
+		overflow: hidden;
+		height:550px;
+		position:relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: getColor(dark-color);
+			top: 0;
+			left: 0;
+			z-index: 2;
+			opacity: 0.95;
+			mix-blend-mode: multiply;
+		  }
+
+		img {
+			width:100%;
+			height:550px;
+			object-fit: cover;
+			filter: sepia(100%);
+		}
+
+		.errcontent {
+			position: absolute;
+			z-index: 3;
+			left: 0;
+			right: 0;
+			top:0;
+			bottom:0;
+			margin: auto;
+			height: 80px;
+			
+	  
+			h1 {
+			  color: getColor(main-color);
+			  letter-spacing: 0;
+			  text-align:center;
+			}
+	  
+			p {
+			  color: getColor(light-color);
+			  text-align:center;
+			}
+		  }
+
+	}
+}

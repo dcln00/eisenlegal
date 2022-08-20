@@ -6,7 +6,7 @@ header
 				img(:src='logo')
 		.nav-btn.d-flex
 			NuxtLink(:to="item.url" v-for='item in Nav') {{item.title}}
-		.nav-date.ms-auto {{ $moment().format('ddd MMMM Do YYYY') }} | {{ showTime }}
+		.nav-date.ml-auto {{ $moment().format('ddd MMMM Do YYYY') }} | {{ showTime }}
 		button
 			.nav-btn-text Call For Consultation
 			.dropdown
@@ -27,60 +27,81 @@ header
 import logoimg from '~/assets/images/logo.svg'
 
 export default {
-    name: "HeaderSection",
-	data() {
-		return {
-			logo: logoimg,
-			showTime: '',
-			interval:null,
-			consultation: [
-				'+233 (0) 30 254 5454',
-				'+233 (0) 30 223 2345'
-			],
-			Nav: [
-				{
-					title: 'Home',
-					url: '/'
-				},
-				{
-					title: 'About',
-					url: '/about'
-				},
-				{
-					title: 'Practice Areas',
-					url: '/practice-areas'
-				},
-				{
-					title: 'Publications',
-					url: '/publications'
-				},
-				{
-					title: 'Contact',
-					url: '/contact'
-				},
-			]
-		}
-	},
-	methods: {
-		toggleMenu() {
-			let mobileNav = document.querySelector('#mobile-nav')
-			let overlayBox = document.querySelector('.overlay')
-			mobileNav.classList.toggle('is-active')
-			overlayBox.classList.add('is-active')
-		},
+  name: 'HeaderSection',
+  data() {
+    return {
+      logo: logoimg,
+      showTime: '',
+      interval: null,
+      consultation: ['+233 (0) 30 254 5454', '+233 (0) 30 223 2345'],
+      Nav: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'About',
+          url: '/about',
+        },
+        {
+          title: 'Practice Areas',
+          url: '/practice-areas',
+        },
+        {
+          title: 'Publications',
+          url: '/publications',
+        },
+        {
+          title: 'Contact',
+          url: '/contact',
+        },
+      ],
+    }
+  },
+  methods: {
+    toggleMenu() {
+      let mobileNav = document.querySelector('#mobile-nav')
+      let overlayBox = document.querySelector('.overlay')
+      mobileNav.classList.toggle('is-active')
+      overlayBox.classList.add('is-active')
+    },
 
-		toggleConsult() {
-			let consultBox = document.querySelector('#consultation-box')
-			let overlayBox = document.querySelector('.overlay')
-			overlayBox.classList.add('is-active')
-  			consultBox.classList.toggle('is-active')
-		}
-	},
-	created() {
-		this.interval=setInterval(() => {
-      	this.showTime = this.$moment().format('h:mm:ss a');
-    	}, 1000)
-	},
+    toggleConsult() {
+      let consultBox = document.querySelector('#consultation-box')
+      let overlayBox = document.querySelector('.overlay')
+      overlayBox.classList.add('is-active')
+      consultBox.classList.toggle('is-active')
+    },
+  },
+  created() {
+    this.interval = setInterval(() => {
+      this.showTime = this.$moment().format('h:mm:ss a')
+    }, 1000)
+  },
+  mounted() {
+	  let navBar = document.querySelector('nav')
+
+	  window.onload = function () {
+		  window.addEventListener('scroll', function (e) {
+			  if (window.pageYOffset > 0) {
+				  navBar.classList.add('is-scrolling')
+			  } else {
+				  navBar.classList.remove('is-scrolling')
+			  }
+		  })
+	  }
+	  
+	  var prevScrollPos
+	  window.onscroll = function () {
+		  var currentScrollPos = window.pageYOffset
+		  if (prevScrollPos > currentScrollPos) {
+			  navBar.style.top = '0px'
+			  prevScrollpos = currentScrollPos
+		  } else if (currentScrollPos > prevScrollPos + 50) {
+			  navBar.style.top = '-100px'
+		  }
+		  prevScrollPos = currentScrollPos
+	  }
+  }
 }
-
 </script>

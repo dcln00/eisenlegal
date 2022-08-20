@@ -1,130 +1,143 @@
 #services {
-    margin-bottom:150px;
+  margin-bottom: 150px;
 
-    a.nav-link {
-        color: getColor(text-color);
-        text-transform: uppercase;
-        font-size: 12px;
-        font-family: $body-heading;
-        white-space: nowrap;
+  a.nav-link {
+    color: getColor(text-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $body-heading;
+    white-space: nowrap;
 
-        &.active {
-            background-color: transparent;
-            color: getColor(main-color);
-        }
+    &.active {
+      background-color: transparent;
+      color: getColor(main-color);
     }
+  }
 
-    .tab-content{
-		
-        .services-title {
-            background-color: getColor(light-color);
-            padding:50px;
-            margin-bottom: 50px;
-            .section-title {
-                margin-bottom:0;
-            }
-        }
-        .services-ul {
-            column-count:2;
-
-            ul{
-                padding-left:0;
-                li {
-                    list-style-type: none;
-                    margin-bottom:5px;
-                    position:relative;
-                    padding-left:30px;
-
-                    &:before {
-                        content: ' ';
-                        background-image: url(~/assets/icons/accordioncheck.svg);
-                        width: 20px;
-                        height:20px;
-                        position:absolute;
-                        left:0;
-                    }
-                }
-            }
-        }
+  .tab-content {
+    .services-title {
+      background-color: getColor(light-color);
+      padding: 50px;
+      margin-bottom: 50px;
+      .section-title {
+        margin-bottom: 0;
+      }
     }
+    .services-ul {
+      column-count: 2;
 
-    .services-cta {
-        background-color: getColor(light-color);
-        padding:50px;
-        margin-top: 60px;
-        .section-title {
-            margin-bottom:0;
+      ul {
+        padding-left: 0;
+        li {
+          list-style-type: none;
+          margin-bottom: 5px;
+          position: relative;
+          padding-left: 30px;
+
+          &:before {
+            content: ' ';
+            background-image: url(~/assets/icons/accordioncheck.svg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+          }
         }
+      }
     }
+  }
 
-	//mobile
+  .services-cta {
+    background-color: getColor(light-color);
+    padding: 50px;
+    margin-top: 60px;
+    .section-title {
+      margin-bottom: 0;
+    }
+  }
 
-	#accordionBasic {
+  //mobile
 
-		.accordion-item {
-			border: 1px solid getColor(light-color);
-			border-radius: 0;
+  #accordionBasic {
+	.accordion-item {
+	  border: 1px solid getColor(text-color);
+	  border-radius: 0;
+	  width: 100%;
+	  background-color: getColor(white);
 
-			.accordion-collapse.collapsing {
-				border-radius: 0;
-			}
-		}
+	  .accordion-collapse.collapsing {
+		border-radius: 0;
+	  }
+	}
 
-		button {
-			background-color: transparent;
-			border-bottom: none;
-			border-radius: 0;
+	.card {
+		margin-bottom:30px;
+		border-bottom:1.25px solid getColor(light-color);
+		border-color: getColor(light-color);
+	}
+
+	.card-header {
+		background-color: getColor(white);
+		//margin-bottom:10px;
+		border:0;
+	}
+
+	button {
+	  background-color: transparent;
+	  border-bottom: none;
+	  border-radius: 0;
+	  color: getColor(text-color);
+	  box-shadow: none;
+	  padding: 30px;
+	  width:100%;
+
+	  .section-title {
+		margin-bottom: 0;
+		color: getColor(main-color);
+		text-align: left;
+	  }
+	}
+
+	.card-body {
+		.services-par {
 			color: getColor(text-color);
-			box-shadow:none;
-			padding:30px;
-
-			.section-title {
-				margin-bottom:0;
-				color: getColor(main-color);
-			}
-		}
-
-		.accordion-body {
-                    
-			.services-par {
+			font-family: $body-font;
+			line-height: 24px;
+			font-size: 14px;
+		  }
+	
+		  .services-ul {
+			ul {
+			  padding-left: 0;
+			  li {
 				color: getColor(text-color);
 				font-family: $body-font;
 				line-height: 24px;
 				font-size: 14px;
-			}
-
-			.services-ul {
-				ul{
-					padding-left:0;
-					li {
-						color: getColor(text-color);
-						font-family: $body-font;
-						line-height: 24px;
-						font-size: 14px;
-						list-style-type: none;
-						margin-bottom:5px;
-						position:relative;
-						padding-left:30px;
+				list-style-type: none;
+				margin-bottom: 5px;
+				position: relative;
+				padding-left: 30px;
 	
-						&:before {
-							content: ' ';
-							background-image: url(~/assets/icons/accordioncheck.svg);
-							width: 20px;
-							height:20px;
-							position:absolute;
-							left:0;
-						}
-					}
+				&:before {
+				  content: ' ';
+				  background-image: url(~/assets/icons/accordioncheck.svg);
+				  width: 20px;
+				  height: 20px;
+				  position: absolute;
+				  left: 0;
 				}
+			  }
 			}
-		}
-
-		.accordion-button::after {
-			background-image: url(~/assets/icons/accordionminus.svg);
-		  }
-
-		.accordion-button.collapsed::after {
-			background-image: url(~/assets/icons/accordionplus.svg);
 		  }
 	}
+
+	.accordion-button::after {
+	  background-image: url(~/assets/icons/accordionminus.svg);
+	}
+
+	.accordion-button.collapsed::after {
+	  background-image: url(~/assets/icons/accordionplus.svg);
+	}
+  }
 }

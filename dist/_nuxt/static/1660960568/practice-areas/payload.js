@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/practice-areas", {data:[{}],fetch:{},mutations:void 0});

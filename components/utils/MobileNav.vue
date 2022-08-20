@@ -7,42 +7,42 @@
 
 <script>
 export default {
-	data() {
-		return {
-			Nav: [
-				{
-					title: 'Home',
-					url: '/'
-				},
-				{
-					title: 'About',
-					url: '/about'
-				},
-				{
-					title: 'Practice Areas',
-					url: '/practice-areas'
-				},
-				{
-					title: 'Publications',
-					url: '/publications'
-				},
-				{
-					title: 'Contact',
-					url: '/contact'
-				},
-			]
-		}
-	},
+  data() {
+    return {
+      Nav: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'About',
+          url: '/about',
+        },
+        {
+          title: 'Practice Areas',
+          url: '/practice-areas',
+        },
+        {
+          title: 'Publications',
+          url: '/publications',
+        },
+        {
+          title: 'Contact',
+          url: '/contact',
+        },
+      ],
+    }
+  },
 
-	methods: {
-		closeMenu() {
-			let overlayBox = document.querySelector('.overlay')
-			let consultBox = document.querySelector('#consultation-box')
-			let mobileNav = document.querySelector('#mobile-nav')
-			overlayBox.classList.remove('is-active')
-			consultBox.classList.remove('is-active')
-			mobileNav.classList.remove('is-active')
-		}
-	}
+  methods: {
+    closeMenu() {
+      let overlayBox = document.querySelector('.overlay')
+      let consultBox = document.querySelector('#consultation-box')
+      let mobileNav = document.querySelector('#mobile-nav')
+      overlayBox.classList.remove('is-active')
+      consultBox.classList.remove('is-active')
+      mobileNav.classList.remove('is-active')
+    },
+  },
 }
 </script>

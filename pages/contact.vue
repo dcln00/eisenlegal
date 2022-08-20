@@ -10,19 +10,19 @@ div
 </template>
 
 <script>
-import jumboPhoto from '~/assets/images/attorney01.jpg';
+import jumboPhoto from '~/assets/images/attorney01.jpg'
 
 export default {
-	name: "ContactPage",
-	head: {
-		titleTemplate: 'Contact - %s',
-	},
-    data() {
-        return {
-            title: "Contact Us",
-			heading: 'Get In Touch',
-            jumboPhoto,
-        };
+  name: 'ContactPage',
+  head: {
+    titleTemplate: 'Contact - %s',
+  },
+  data() {
+    return {
+      title: 'Contact Us',
+      heading: 'Get In Touch',
+      jumboPhoto,
     }
+  },
 }
 </script>

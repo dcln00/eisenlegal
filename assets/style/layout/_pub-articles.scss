@@ -1,63 +1,62 @@
 #posts {
-	margin-bottom: 150px;
+  margin-bottom: 150px;
 
-	.articles {
-		margin: 0 auto;
-		max-width: 800px;
-	  }
-	  .article-inner {
-		column-gap: 50px;
-		margin-bottom: 50px;
+  .articles {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  .article-inner {
+    column-gap: 50px;
+    margin-bottom: 50px;
 
-		.pub-img {
-			width: 350px;
-			aspect-ratio: 1;
-			overflow:hidden;
+    .pub-img {
+      width: 350px;
+      aspect-ratio: 1;
+      overflow: hidden;
 
-			img {
-				display: block;
-				aspect-ratio: 1;
-				width: 100%;
-				max-width: 350px;
-				object-fit: cover;
-			  }
-		}
+      img {
+        display: block;
+        aspect-ratio: 1;
+        width: 100%;
+        max-width: 350px;
+        object-fit: cover;
+      }
+    }
 
-		.inner-detail {
+    .inner-detail {
+      .pub-title {
+        @include section-heading;
+        color: #bbb;
+        padding-bottom: 30px;
+        font-size: 25px;
+        transition: all 0.5s;
 
-			.pub-title {
-				@include section-heading;
-				color: #bbb;
-				padding-bottom:30px;
-				font-size: 25px;
-				transition: all .5s;
+        &:hover {
+          color: getColor(text-color);
+        }
+      }
 
-				&:hover {
-					color: getColor(text-color);
-				}
-			}
+      .pub-desc {
+        text-transform: uppercase;
+        font-size: 10px;
+        padding-bottom: 25px;
+      }
 
-			.pub-desc {
-				text-transform: uppercase;
-				font-size: 10px;
-				padding-bottom:25px;
-			}
+      .pub-btn {
+        background-color: getColor(main-color);
+        color: getColor(white);
+        padding: 10px;
+        padding-right: 25px;
+        font-size: 11px;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all 0.35s;
 
-			.pub-btn {
-				background-color: getColor(main-color);
-				color: getColor(white);
-				padding:10px;
-				padding-right:25px;
-				font-size: 11px;
-				text-transform: uppercase;
-				display: inline-block;
-				transition: all 0.35s;
-
-				&:hover {
-					background-color: getColor(main-hover);
-					padding-right: 35px;
-				}
-			}
-		}
-	  }
+        &:hover {
+          background-color: getColor(main-hover);
+          padding-right: 35px;
+        }
+      }
+    }
+  }
 }

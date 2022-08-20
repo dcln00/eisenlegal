@@ -1,59 +1,67 @@
-* {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-html {
-  overflow-x:hidden;
-}
-
-body, html {
-    overflow-x:hidden;
-    scrollbar-color:getColor(main-color) getColor(dark-color);
-    scrollbar-width: thin;
-    transition: all 0.5s;
-}
-
-body {
-    font-family: $body-font;
-    background-color: getColor(dark-color);
-}
-
-::selection {
-    background-color: #89e3d2;
-    color: getColor(light-color);
-}
-
-::-webkit-scrollbar {
-    width: 7px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: getColor(main-color);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: getColor(dark-color);
-  }
-
-a {
-    text-decoration:none;
-    color: getColor(light-color);
-    transition: all 0.5s;
-
-    &:hover {
-      color: getColor(text-color);
+@media (min-width: 1400px) {
+    .container{
+        max-width: 1320px;
     }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  scrollbar-color: getColor(main-color) getColor(dark-color);
+  scrollbar-width: thin;
+  transition: all 0.5s;
+}
+
+body {
+  font-family: $body-font;
+  background-color: getColor(dark-color);
+}
+
+::selection {
+  background-color: #89e3d2;
+  color: getColor(light-color);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: getColor(main-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: getColor(dark-color);
+}
+
+a {
+  text-decoration: none;
+  color: getColor(light-color);
+  transition: all 0.5s;
+
+  &:hover {
+    color: getColor(text-color);
+	text-decoration: none;
+  }
+}
+
 .nuxt-link-exact-active {
-	color: getColor(main-color);
+  color: getColor(main-color);
 }
 
 ul .aside-links a {
-	color:getColor(text-color);
+  color: getColor(text-color);
 }
 
 i {
@@ -73,19 +81,19 @@ p {
 }
 
 .overlay {
-  position:fixed;
-  top:0;
-  left:0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height:100vh;
+  height: 100vh;
   background-color: black;
   opacity: 0;
   z-index: 10;
-  transition: all .5s;
+  transition: all 0.5s;
   pointer-events: none;
 
   &.is-active {
-    opacity: .8;
+    opacity: 0.8;
     pointer-events: all;
   }
 }

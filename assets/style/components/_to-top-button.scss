@@ -1,22 +1,22 @@
 #to-top-button {
-    position:fixed;
-    bottom:50px;
-    right:-110px;
-    z-index:10;
-    background-color: getColor(main-color);
-    color: getColor(white);
-    padding:10px;
-    padding-right:25px;
-    font-family: $heading-font;
-    font-size: 11px;
-    transition: 0.4s;
-    transition-timing-function: ease-in-out;
+  position: fixed;
+  bottom: 50px;
+  right: -110px;
+  z-index: 10;
+  background-color: getColor(main-color);
+  color: getColor(white);
+  padding: 10px;
+  padding-right: 25px;
+  font-family: $heading-font;
+  font-size: 11px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
 
-    &.is-active {
-        right:0;
-    }
+  &.is-active {
+    right: 0;
+  }
 
-    div {
-        cursor:default;
-    }
+  div {
+    cursor: default;
+  }
 }

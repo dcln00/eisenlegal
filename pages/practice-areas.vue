@@ -11,19 +11,19 @@ div
 </template>
 
 <script>
-import jumboPhoto from '~/assets/images/practiceareas.jpg';
+import jumboPhoto from '~/assets/images/practiceareas.jpg'
 
 export default {
-    name: "PracticeAreasPage",
-	head: {
-		titleTemplate: 'Practice Areas - %s',
-	},
-    data() {
-        return {
-            title: "Services",
-			heading: 'Practice Areas',
-            jumboPhoto,
-        };
+  name: 'PracticeAreasPage',
+  head: {
+    titleTemplate: 'Practice Areas - %s',
+  },
+  data() {
+    return {
+      title: 'Services',
+      heading: 'Practice Areas',
+      jumboPhoto,
     }
+  },
 }
 </script>

@@ -10,7 +10,7 @@ div
 
 <script>
 export default {
-    name: "IndexPage",
-	scrollToTop: true,
+  name: 'IndexPage',
+  scrollToTop: true,
 }
 </script>

@@ -1,93 +1,94 @@
 #small-jumbotron {
-	height:300px;
-    //background-color: getColor(dark-color);
-    background-image: url(/src/assets/images/bg-texture.png);
-    position:relative;
-    margin-bottom:150px;
+  height: 300px;
+  //background-color: getColor(dark-color);
+  background-image: url(/src/assets/images/bg-texture.png);
+  position: relative;
+  margin-bottom: 150px;
 
-	.smalljumbotext {
-		@include section-heading;
-		color: getColor(text-color);
-		padding-top: 150px;
-	}
+  .smalljumbotext {
+    @include section-heading;
+    color: getColor(text-color);
+    padding-top: 150px;
+  }
 }
 
 #pagination {
-	height: 100px;
-	background-color: getColor(light-color);
+  height: 100px;
+  background-color: getColor(light-color);
 
-	a {
-		color: getColor(text-color);
-		font-size:12px;
-		display: block;
+  a {
+    color: getColor(text-color);
+    font-size: 12px;
+    display: block;
 
-		&:hover {
-			color: getColor(main-color);
-		}
-	}
+    &:hover {
+      color: getColor(main-color);
+    }
+  }
 
-	.next > a:nth-child(2) {
-		text-align: right;
-	}
+  .next > a:nth-child(2) {
+    text-align: right;
+  }
 
-	.prev, .next {
-		transition: all .5s;
-		position: relative;
-		width: 250px;
-		overflow: visible;
+  .prev,
+  .next {
+    transition: all 0.5s;
+    position: relative;
+    width: 250px;
+    overflow: visible;
 
-		p {
-			text-transform: uppercase;
-			font-family: $body-heading;
-			margin-bottom:5px;
-		}
-	}
+    p {
+      text-transform: uppercase;
+      font-family: $body-heading;
+      margin-bottom: 5px;
+    }
+  }
 
-	.prev:hover {
-		transform: translateX(10px);
-	}
+  .prev:hover {
+    transform: translateX(10px);
+  }
 
-	.next:hover {
-		transform: translateX(-10px);
-	}
+  .next:hover {
+    transform: translateX(-10px);
+  }
 
-	.prev:after {
-		content: '';
-		position: absolute;
-		width: 25%;
-		transform: scaleX(0);
-		height: 1px;
-		top: 7px;
-		right: 20px;
-		background-color: getColor(main-color);
-		transform-origin: bottom left;
-		transition: transform 0.25s ease-out;
-	}
+  .prev:after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    transform: scaleX(0);
+    height: 1px;
+    top: 7px;
+    right: 20px;
+    background-color: getColor(main-color);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
 
-	.prev:hover:after {
-		transform: scaleX(1);
-  		transform-origin: bottom left;
-	}
+  .prev:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
-	.next:after {
-		content: '';
-		position: absolute;
-		width: 25%;
-		transform: scaleX(0);
-		height: 1px;
-		top: 7px;
-		left: 45px;
-		background-color: getColor(main-color);
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
+  .next:after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    transform: scaleX(0);
+    height: 1px;
+    top: 7px;
+    left: 45px;
+    background-color: getColor(main-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
 
-	.next:hover:after {
-		transform: scaleX(1);
-  		transform-origin: bottom right;
-	}
+  .next:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+  }
 
-	.next > p:nth-child(1) {
-		text-align:right;
-	}
+  .next > p:nth-child(1) {
+    text-align: right;
+  }
 }

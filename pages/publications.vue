@@ -31,32 +31,32 @@ div
 </template>
 
 <script>
-import jumboPhoto from '~/assets/images/publications.jpg';
+import jumboPhoto from '~/assets/images/publications.jpg'
 
 export default {
-    name: "PublicationsPage",
-    head: {
-        titleTemplate: "Publications - %s",
-    },
-    data() {
-        return {
-			title: "Blog",
-			heading: 'Publications',
-            jumboPhoto,
-        }
-    },
-	async asyncData({ $content, params }) {
-		const articles = await $content('articles', params.slug)
-			.only(['title', 'description', 'image', 'slug', 'category'])
-			.sortBy('createdAt', 'desc')
-			.fetch()
+  name: 'PublicationsPage',
+  head: {
+    titleTemplate: 'Publications - %s',
+  },
+  data() {
+    return {
+      title: 'Blog',
+      heading: 'Publications',
+      jumboPhoto,
+    }
+  },
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles', params.slug)
+      .only(['title', 'description', 'image', 'slug', 'category'])
+      .sortBy('createdAt', 'desc')
+      .fetch()
 
-		const category = await $content('categories')
-			.only(['name', 'description','slug'])
-			.sortBy('createdAt', 'asc')
-			.fetch()
+    const category = await $content('categories')
+      .only(['name', 'description', 'slug'])
+      .sortBy('createdAt', 'asc')
+      .fetch()
 
-		return { articles, category }
-	},
+    return { articles, category }
+  },
 }
 </script>

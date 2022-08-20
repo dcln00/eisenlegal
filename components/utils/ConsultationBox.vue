@@ -7,13 +7,10 @@
 
 <script>
 export default {
-	data() {
-		return {
-			consultation: [
-				'+233 (0) 30 254 5454',
-				'+233 (0) 30 223 2345'
-			],
-		}
-	}
+  data() {
+    return {
+      consultation: ['+233 (0) 30 254 5454', '+233 (0) 30 223 2345'],
+    }
+  },
 }
 </script>

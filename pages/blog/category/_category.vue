@@ -31,46 +31,57 @@ div
 
 <script>
 export default {
-	async asyncData({ $content, params, error }) {
-		try {
-			const category = await $content('categories')
-				.where({ slug: { $contains: params.category } })
-				.limit(1)
-				.fetch()
+  async asyncData({ $content, params, error }) {
+    try {
+      const category = await $content('categories')
+        .where({ slug: { $contains: params.category } })
+        .limit(1)
+        .fetch()
 
-			const cat = category.length > 0 ? category[0] : {}
+      const cat = category.length > 0 ? category[0] : {}
 
-			const articles = await $content('articles')
-				.where({ category: { $contains: cat.name } })
-				.sortBy('createdAt', 'asc')
-				.fetch()
+      const articles = await $content('articles')
+        .where({ category: { $contains: cat.name } })
+        .sortBy('createdAt', 'asc')
+        .fetch()
 
-			const categories = await $content('categories')
-			.only(['name', 'description','slug'])
-			.sortBy('createdAt', 'asc')
-			.fetch()
+      const categories = await $content('categories')
+        .only(['name', 'description', 'slug'])
+        .sortBy('createdAt', 'asc')
+        .fetch()
 
-			return { cat, articles, categories }
+      return { cat, articles, categories }
+    } catch (err) {
+      error({
+        statusCode: 404,
+        message: 'Page could not be found',
+      })
+    }
+  },
 
-		} catch (err) {
-			error({
-				statusCode: 404,
-				message: 'Page could not be found',
-			})
-		}
-	},
-
-	head() {
-		return {
-			titleTemplate:this.cat.name + ' - %s',
-			meta: [
-				{ hid: 'description', name: 'description', content: this.cat.description },
-				{ hid: 'og:title', property: 'og:title', content: this.cat.name },
-				{ hid: 'og:description', property: 'og:description', content: this.cat.description },
-				{ hid: 'twitter:title', name: 'twitter:title', content: this.cat.name },
-				{ hid: 'twitter:description', name: 'twitter:description', content: this.cat.description }
-			],
-		}
-	}
+  head() {
+    return {
+      titleTemplate: this.cat.name + ' - %s',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.cat.description,
+        },
+        { hid: 'og:title', property: 'og:title', content: this.cat.name },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.cat.description,
+        },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.cat.name },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.cat.description,
+        },
+      ],
+    }
+  },
 }
 </script>

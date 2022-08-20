@@ -1,30 +1,29 @@
 #post-side {
+  .aside-box {
+    margin-bottom: 50px;
+  }
 
-	.aside-box {
-		margin-bottom: 50px;
-	}
+  div.aside-box:nth-child(2) {
+    margin-bottom: 0;
+  }
 
-	div.aside-box:nth-child(2) {
-		margin-bottom: 0;
-	}
+  .aside-title {
+    @include section-title;
+    font-family: $body-heading;
+    font-size: 11px;
+    color: getColor(main-color);
+  }
 
-	.aside-title {
-		@include section-title;
-		font-family: $body-heading;
-		font-size: 11px;
-		color: getColor(main-color);
-	}
+  ul {
+    padding-left: 0;
+    font-size: 0;
+    line-height: 30px;
+  }
 
-	ul {
-		padding-left:0;
-		font-size:0;
-		line-height: 30px;
-	}
-
-	li {
-		list-style-type: none;
-		color: getColor(text-color);
-		font-size: 12px;
-		text-transform:uppercase;
-	}
+  li {
+    list-style-type: none;
+    color: getColor(text-color);
+    font-size: 12px;
+    text-transform: uppercase;
+  }
 }

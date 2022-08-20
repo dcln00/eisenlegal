@@ -36,21 +36,20 @@ footer.container-fluid
 <script>
 import logo from '~/assets/images/logo.svg'
 export default {
-    name:'FooterSection',
-    data() {
-        return {
-            footerMenuTitle: 'Working Hours',
-			logo,
-            services:[
-                {service: 'Company Secretarial Services'},
-                {service: 'Registration of trademark, etc.'},
-                {service: 'Investment Consultants'},
-                {service: 'Arbitration and Mediation '},
-                {service: 'Property Consultants '},
-                {service: 'Notary Public'},
-                ],
-        }
-    },
+  name: 'FooterSection',
+  data() {
+    return {
+      footerMenuTitle: 'Working Hours',
+      logo,
+      services: [
+        { service: 'Company Secretarial Services' },
+        { service: 'Registration of trademark, etc.' },
+        { service: 'Investment Consultants' },
+        { service: 'Arbitration and Mediation ' },
+        { service: 'Property Consultants ' },
+        { service: 'Notary Public' },
+      ],
+    }
+  },
 }
-
 </script>

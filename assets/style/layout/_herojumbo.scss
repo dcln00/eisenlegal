@@ -1,49 +1,49 @@
 #herojumbo {
-    height:100vh;
-    background-color: getColor(dark-color);
-    background-image: url(/src/assets/images/bg-texture.png);
-    position:relative;
-    margin-bottom:150px;
+  height: 100vh;
+  background-color: getColor(dark-color);
+  background-image: url(/src/assets/images/bg-texture.png);
+  position: relative;
+  margin-bottom: 150px;
 
-    .hero-box {
-        height:100vh;
-        max-width: 60vw;
-        position:absolute;
-        right:0;
-        overflow:hidden;
+  .hero-box {
+    height: 100vh;
+    max-width: 60vw;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
 
-        &:after {
-            content:'';
-            position:absolute;
-            width:100%;
-            height:100%;
-            background-color: getColor(dark-color);
-            top:0;
-            left:0;
-            z-index:2;
-            opacity: .5;
-            mix-blend-mode: multiply;
-        }
-
-        img {
-            width:60vw;
-            height: 100%;
-            object-fit: cover;
-        }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: getColor(dark-color);
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
     }
 
-    .jumbotext {
-        height:100vh;
-        position:relative;
-        z-index: 3;
-        h1 {
-            color: getColor(light-color);
-            letter-spacing:0;
-        }
-
-        p {
-            max-width: 550px;
-            color: getColor(light-color);
-        }
+    img {
+      width: 60vw;
+      height: 100%;
+      object-fit: cover;
     }
+  }
+
+  .jumbotext {
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+    h1 {
+      color: getColor(light-color);
+      letter-spacing: 0;
+    }
+
+    p {
+      max-width: 550px;
+      color: getColor(light-color);
+    }
+  }
 }

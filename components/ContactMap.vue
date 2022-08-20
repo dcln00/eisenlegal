@@ -18,28 +18,26 @@ section#contact-map.container-fluid.px-0
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
 .gmap_canvas {
-        overflow: hidden;
-        background: none !important;
-        height: 50vh;
-        width: 100%;
-      }
+  overflow: hidden;
+  background: none !important;
+  height: 50vh;
+  width: 100%;
+}
 
 .mapouter {
-        position: relative;
-        text-align: right;
-        height: 50vh;
-        width: 100%;
-      }
+  position: relative;
+  text-align: right;
+  height: 50vh;
+  width: 100%;
+}
 
 #gmap_canvas {
-	width: 100%;
-	height: 50vh;
+  width: 100%;
+  height: 50vh;
 }
 </style>
